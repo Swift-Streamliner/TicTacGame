@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  TicTacGameSwiftUIMVVMFirebase
 //
 //  Created by MEI on 24.07.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
     @ViewBuilder
     private func titleView() -> some View {
@@ -17,7 +17,7 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 180, height: 180)
             
-            Text("Tic Tac Toe")
+            Text(AppStrings.appName)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
         }
@@ -28,12 +28,17 @@ struct ContentView: View {
     @ViewBuilder
     private func buttonView() -> some View {
         VStack (spacing: 15) {
-            Button {
-                
-            } label : {
-                Text("VS CPU")
+            ForEach(GameMode.allCases, id: \.self) { mode in
+                Button {
+                    
+                } label : {
+                    Text(mode.name)
+                }
+                .background(mode.color)
             }
         }
+        .padding(.horizontal, 16)
+        .padding(.bottom, 50)
     }
     
     @ViewBuilder
@@ -54,6 +59,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

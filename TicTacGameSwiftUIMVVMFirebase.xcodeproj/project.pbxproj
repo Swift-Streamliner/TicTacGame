@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19200DBD2A6EEECD0030C7AB /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19200DBC2A6EEECD0030C7AB /* GameMode.swift */; };
+		19200DBF2A6EEF450030C7AB /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19200DBE2A6EEF450030C7AB /* AppStrings.swift */; };
 		193CB3B92A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CB3B82A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebaseApp.swift */; };
-		193CB3BB2A6EEAE50049B6F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CB3BA2A6EEAE50049B6F0 /* ContentView.swift */; };
+		193CB3BB2A6EEAE50049B6F0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CB3BA2A6EEAE50049B6F0 /* HomeView.swift */; };
 		193CB3BD2A6EEAE60049B6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193CB3BC2A6EEAE60049B6F0 /* Assets.xcassets */; };
 		193CB3C12A6EEAE60049B6F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193CB3C02A6EEAE60049B6F0 /* Preview Assets.xcassets */; };
 		193CB3CB2A6EEAE60049B6F0 /* TicTacGameSwiftUIMVVMFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CB3CA2A6EEAE60049B6F0 /* TicTacGameSwiftUIMVVMFirebaseTests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19200DBC2A6EEECD0030C7AB /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		19200DBE2A6EEF450030C7AB /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		193CB3B52A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacGameSwiftUIMVVMFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193CB3B82A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacGameSwiftUIMVVMFirebaseApp.swift; sourceTree = "<group>"; };
-		193CB3BA2A6EEAE50049B6F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		193CB3BA2A6EEAE50049B6F0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		193CB3BC2A6EEAE60049B6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		193CB3BE2A6EEAE60049B6F0 /* TicTacGameSwiftUIMVVMFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TicTacGameSwiftUIMVVMFirebase.entitlements; sourceTree = "<group>"; };
 		193CB3C02A6EEAE60049B6F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19200DBB2A6EEEC00030C7AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19200DBC2A6EEECD0030C7AB /* GameMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		193CB3AC2A6EEAE50049B6F0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +107,10 @@
 		193CB3B72A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				19200DBE2A6EEF450030C7AB /* AppStrings.swift */,
+				19200DBB2A6EEEC00030C7AB /* Model */,
 				193CB3B82A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebaseApp.swift */,
-				193CB3BA2A6EEAE50049B6F0 /* ContentView.swift */,
+				193CB3BA2A6EEAE50049B6F0 /* HomeView.swift */,
 				193CB3BC2A6EEAE60049B6F0 /* Assets.xcassets */,
 				193CB3BE2A6EEAE60049B6F0 /* TicTacGameSwiftUIMVVMFirebase.entitlements */,
 				193CB3BF2A6EEAE60049B6F0 /* Preview Content */,
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193CB3BB2A6EEAE50049B6F0 /* ContentView.swift in Sources */,
+				193CB3BB2A6EEAE50049B6F0 /* HomeView.swift in Sources */,
 				193CB3B92A6EEAE50049B6F0 /* TicTacGameSwiftUIMVVMFirebaseApp.swift in Sources */,
+				19200DBF2A6EEF450030C7AB /* AppStrings.swift in Sources */,
+				19200DBD2A6EEECD0030C7AB /* GameMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
