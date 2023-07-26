@@ -30,3 +30,9 @@ struct AppButtonStyle : ButtonStyle {
             .shadow(radius: 8)
     }
 }
+
+extension ButtonStyle where Self == AppButtonStyle {
+    static func appButton(color: Color) -> AppButtonStyle {
+        AppButtonStyle(color: color)
+    }
+}

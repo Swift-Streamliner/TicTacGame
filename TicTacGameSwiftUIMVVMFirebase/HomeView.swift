@@ -34,7 +34,7 @@ struct HomeView: View {
                 } label : {
                     Text(mode.name)
                 }
-                .background(mode.color)
+                .buttonStyle(.appButton(color: mode.color))
             }
         }
         .padding(.horizontal, 16)
