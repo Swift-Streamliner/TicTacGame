@@ -12,4 +12,5 @@ struct AppStrings {
     static let vsCpu = "VS CPU"
     static let vsHuman = "VS HUMAN"
     static let online = "Online"
+    static let exit = "Exit"
 }

@@ -10,8 +10,37 @@ import SwiftUI
 struct GameView: View {
     let mode: GameMode
     
+    @ViewBuilder
+    private func closeButton() -> some View {
+        HStack {
+            Spacer()
+            Button {
+                
+            } label: {
+                Text(AppStrings.exit)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.red)
+                
+            }
+            .frame(width: 80, height: 40)
+            .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+            
+        }
+        .padding(.bottom, 20)
+    }
+    
+    @ViewBuilder
+    private func main() -> some View {
+        VStack {
+            closeButton()
+            Spacer()
+        }
+        .padding(.horizontal, 16)
+    }
+    
     var body: some View {
-        Text("Hello, Game! \(mode.name)")
+        main()
     }
 }
 
