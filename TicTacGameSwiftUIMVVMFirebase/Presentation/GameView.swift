@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     @Environment(\.dismiss) var dismiss
     let mode: GameMode
+    var viewModel = GameViewModel()
     
     @ViewBuilder
     private func closeButton() -> some View {
@@ -52,17 +53,34 @@ struct GameView: View {
     }
     
     @ViewBuilder
-    private func main() -> some View {
+    private func gameBoard(geometry: GeometryProxy) -> some View {
         VStack {
-            closeButton()
-            scoreView()
-            
-            Spacer()
-            gameStatusView()
-            Spacer()
+            LazyVGrid(columns: viewModel.colums, spacing: 10) {
+                ForEach(0..<9) { index in
+                    Text("hello \(index)")
+                }
+                
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.horizontal, 16)
+        .padding(.bottom, 10)
+        .background(.white)
+    }
+    
+    @ViewBuilder
+    private func main() -> some View {
+        GeometryReader {geometry in
+            VStack {
+                closeButton()
+                scoreView()
+                
+                Spacer()
+                gameStatusView()
+                Spacer()
+                gameBoard(geometry: geometry)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.horizontal, 16)
+        }
     }
     
     var body: some View {
