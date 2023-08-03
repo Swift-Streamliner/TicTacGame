@@ -57,7 +57,10 @@ struct GameView: View {
         VStack {
             LazyVGrid(columns: viewModel.colums, spacing: 10) {
                 ForEach(0..<9) { index in
-                    Text("hello \(index)")
+                    ZStack {
+                        BoardCircleView(geometry: geometry)
+                        Text("\(index)")
+                    }
                 }
                 
             }
